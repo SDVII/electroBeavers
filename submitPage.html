@@ -15,6 +15,40 @@
         margin: 0 auto;
         background:white;
 }
+
+#tbl-form{
+  width: 40%;
+}
+
+#tbl-form tr{
+  width: 90%;
+}
+
+td, th {
+    padding: 0 0 18px 0;
+}
+
+.td-left{
+  width: 20%;
+}
+
+.td-left{
+  width: 10%;
+}
+
+.form-inp{
+  width: 100%;
+}
+
+#div-form{
+  padding: 5px;
+}
+
+.prg{
+  margin-left: 46px;
+}
+
+
 .container-fluid
 {
         margin-top: 58px;
@@ -44,10 +78,10 @@
 
       }
 
-      .navbar-nav {
+    .navbar-nav {
         float: left;
         margin: 0 0 0px -21px;
-  }
+    }
 
       .navbar-fixed-top{
 
@@ -107,14 +141,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-            <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Beaver News</a></li>
-						<li><a href="#new" style="color:white;">New</a></li>
-            <li><a href="#comment" style="color:white;">Comments</a></li>
-            <li><a href="#show" style="color:white;">Show</a></li>
-            <li><a href="#ask" style="color:white;">Ask</a></li>
-            <li><a href="#jobs" style="color:white;">Jobs</a></li>
-            <li><a href="#submit" style="color:white;">Submit</a></li>
-            <li><a href="#login" style="color:white;">Login</a></li>
+            <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Submit</a></li>
 					</ul>
 				</div>
 
@@ -127,51 +154,45 @@
 			<div class="row">
 				<div class="col-sm-12">
 
+          <form method="post" style="margin-top: 2%; margin-left: 3%;">
+      			<table id="tbl-form">
+      				<tr>
+      					<td class="td-left">title</td>
+      					<td class="td-right">
+      						<input class="form-inp" type="text" name="title">
+      					</td>
+      				</tr>
+      				<tr>
+      					<td class="td-left">url</td>
+      					<td class="td-right">
+      						<input class="form-inp" type="text" name="url">
+      					</td>
+      				</tr>
+      				<tr>
+      					<td>&nbsp;</td>
+      					<td style="font-weight: bold;">or</td>
+      				</tr>
+      				<tr>
+      					<td class="td-left">text</td>
+      					<td class="td-right">
+      						<textarea class="form-inp" style="height: 100px;">
+      						</textarea>
+      					</td>
+      				</tr>
+      				<tr>
+      					<td class="td-left">&nbsp;</td>
+      					<td class="td-right">
+      						<input type="Submit" name="submit" value="submit">
+      					</td>
+      				</tr>
+      			</table>
+      		</form>
+          <div>
+      			<p class="prg">Leave url blank to submit a question for discussion. If there is no url, the next (if any) will appear at the top of the thread.</p>
+      			<p class="prg">You can also submit via <a style="color:#000" href="#">bookmarklet</a></p>
+      		</div>
+        </div>
 
-
-					 <div class="item-laptop">
-  <p><ol type="1">
-  <li>
-    <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
-    <a class="title" href="">
-      Title
-    </a> <a class="site" href="">
-    <span *ngIf="item.domain" class="domain">(xyz.com)</span></a>
-    <div class="subtext-laptop">
-    <span style="padding-left:1.1%">
-      X points by
-      <a href="">UserName</a>
-    </span>
-    <span>
-      X hours ago
-      <span> |
-        <a href="">
-          <span *ngIf="item.comments_count !== 0">
-            X
-            <span *ngIf="item.comments_count == 1">comment<i class="fa fa-comments-o"></i></span>
-            <span *ngIf="item.comments_count > 1">comments</span>
-          </span> |
-          <span *ngIf="item.comments_count === 0">discuss</span> |
-
-        <span *ngIf="item.hide">hide</span> |
-        <span *ngIf="item.past">past</span> |
-        <span *ngIf="item.web">web</span>
-              </a>
-      </span>
-    </span>
-  </div>
-    </li>
-
-      </ol>
-</div>
-    	 <nav class="nav1">
-						<ul class="pager">
-							<li class="previous"><a href="#"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Prev</a></li>
-							<li class="next"><a href="#">Next <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
-						</ul>
-
-
-					</nav>
 					<hr>
 <footer><div class="">
      <div style="color:grey;">
