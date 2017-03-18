@@ -1,0 +1,1 @@
+Don't forget to run the ASP.NET app first before starting the test!

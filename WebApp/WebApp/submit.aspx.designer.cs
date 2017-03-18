@@ -13,6 +13,15 @@ namespace WebApp {
     public partial class submit {
         
         /// <summary>
+        /// hyperHome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hyperHome;
+        
+        /// <summary>
         /// title control.
         /// </summary>
         /// <remarks>

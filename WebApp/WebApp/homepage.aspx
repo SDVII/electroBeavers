@@ -38,12 +38,9 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
                         <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Beaver News</a></li>
-						<li><a href="#new" style="color:white;">New</a></li>
-                        <li><a href="#comment" style="color:white;">Comments</a></li>
-                        <li><a href="#show" style="color:white;">Show</a></li>
                         <li><a href="#ask" style="color:white;">Ask</a></li>
-                        <li><a href="#jobs" style="color:white;">Jobs</a></li>
-                        <li><a href="submit.aspx" style="color:white;">Submit</a></li>
+                        <li><a href="#jobs" style="color:white;">Questions</a></li>
+                        <li><asp:HyperLink ID="hyperSubmit" runat="server" Text="Submit" NavigateUrl="~/submit.aspx" ></asp:HyperLink></li>
                         <li><a href="#login" style="color:white;">Login</a></li>
 					</ul>
 				</div>
@@ -56,7 +53,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					 <div class="item-laptop">
-                        <ol type="1"/>
+                        <ol type="1">
                             <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
                     </div>
     	            <nav class="nav1">

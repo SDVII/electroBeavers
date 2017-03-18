@@ -25,7 +25,7 @@ namespace WebApp
                 + Server.MapPath("Database/BEAVER NEWS.mdb") + ";Persist Security Info=False");
 
                 //Getting news from DB
-                string query = "SELECT * FROM ARTICLE ";
+                string query = "SELECT * FROM ARTICLE ORDER BY DATE DESC";
                 OleDbCommand cmd1 = new OleDbCommand(query, con);
                 con.Open();
        

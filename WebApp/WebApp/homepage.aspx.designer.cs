@@ -13,6 +13,15 @@ namespace WebApp {
     public partial class homepage {
         
         /// <summary>
+        /// hyperSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hyperSubmit;
+        
+        /// <summary>
         /// PlaceHolder1 control.
         /// </summary>
         /// <remarks>
