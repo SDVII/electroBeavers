@@ -58,11 +58,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BEAVER NEWS.mdb" />
+    <Content Include="Database\BEAVER NEWS.mdb" />
     <Content Include="Contents\BNlogo.png" />
     <Content Include="Contents\css\bootstrap.css" />
     <Content Include="Contents\css\bootstrap.min.css" />
-    <Content Include="Data.mdb" />
+    <Content Include="Contents\css\homepage.css" />
+    <Content Include="Contents\css\submit.css" />
+    <Content Include="Contents\css\template.css" />
     <Content Include="homepage.aspx" />
     <Content Include="jobs.aspx" />
     <Content Include="login.aspx" />
@@ -129,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contents\fonts\" />
+    <Folder Include="Contents\html\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

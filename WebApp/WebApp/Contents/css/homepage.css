@@ -1,0 +1,11 @@
+﻿.pager{
+    padding-right: 5%;
+    padding-left: 5%;
+    margin: 0 0px 20px 0px;
+    text-align: center;
+    list-style: none;
+    position: fixed;
+    bottom: 33px;
+    height: 30px;
+    width: 88%;
+}

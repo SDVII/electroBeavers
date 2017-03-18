@@ -1,0 +1,31 @@
+﻿#tbl-form{
+  width: 40%;
+}
+
+#tbl-form tr{
+  width: 90%;
+}
+
+td, th {
+    padding: 0 0 18px 0;
+}
+
+.td-left{
+  width: 20%;
+}
+
+.td-left{
+  width: 10%;
+}
+
+.form-inp{
+  width: 100%;
+}
+
+#div-form{
+  padding: 5px;
+}
+
+.prg{
+  margin-left: 1%;
+}

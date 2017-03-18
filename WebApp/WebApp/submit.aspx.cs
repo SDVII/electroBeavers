@@ -20,14 +20,13 @@ namespace WebApp
 
             DateTime localDate = DateTime.Now;
 
+            //Submitting data to DB
             OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +
-     Server.MapPath("BEAVER NEWS.mdb") + ";Persist Security Info=False");
+            Server.MapPath("Database/BEAVER NEWS.mdb") + ";Persist Security Info=False");
             string query = "INSERT INTO ARTICLE ([TITLE], [DATE], [LIKES], [user_ID], [description], [url]) VALUES ('" + title.Text + "','" + localDate + "' ,'0','1','" + txt.Text + "','" + URL.Text + "')";
-                
-            //string query = "insert into ustable(uname,password,firstname,surename,email) values (@a,@b,@c,@d,@e)";
             OleDbCommand cmd = new OleDbCommand(query, con);
 
-
+            //Validation for the execution
             try
             {
                 con.Open();

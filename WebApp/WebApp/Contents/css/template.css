@@ -1,0 +1,60 @@
+﻿body{
+    margin: 0 auto;
+    background:white;
+}
+
+nav1 {
+
+    position: fixed;
+    left:250px;
+    bottom: 50px;
+    height: 100px;
+    width: 100%;
+
+}
+
+.navbar-nav {
+    float: left;
+    margin: 0 0 0px -21px;
+}
+
+.navbar-fixed-top{
+
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 90%;
+
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 6px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.container-fluid{
+    margin-top: 49px;
+    margin-bottom: 0px;
+    margin-right: inherit;
+    margin-left: inherit;
+    width:90%;
+    height: 1080px;
+    background:#f2f3ff;
+}
+
+footer {
+    position: fixed;
+    padding-left: 37%;
+    padding-right: 0;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+}
+
+/* IE 6 */
+* html #footer {
+    position:absolute;
+    top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
