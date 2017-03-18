@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
    
-
+    <link rel="icon" href="Contents/BNlogo.png">
   <title>Hacker News</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,18 +56,18 @@ td, th {
 
 .container-fluid
 {
-        margin-top: 58px;
+        margin-top: 49px;
     margin-bottom: 0px;
     margin-right: inherit;
     margin-left: inherit;
         width:90%;
 
-        height: 94%;
+        height: 1080px;
         background:#f2f3ff;
 }
       footer {
     position: fixed;
-     padding-left: 23%;
+     padding-left: 39%;
      padding-right: 0;
      bottom: 0px;
      height: 30px;
@@ -90,7 +90,6 @@ td, th {
 
       .navbar-fixed-top{
 
-        margin-top: 0.5%;
         margin-right: 5%;
         margin-left: 5%;
         width: 90%;
@@ -204,12 +203,6 @@ td, th {
   <a href="#guidelines" style="color:black;">Guidelines</a> |
   <a href="#faq" style="color:black;">FAQ</a> |
   <a href="#support" style="color:black;">Support</a> |
-  <a href="#api" style="color:black;">API</a> |
-  <a href="#security" style="color:black;">Security</a> |
-  <a href="#lists"style="color:black;">Lists</a> |
-  <a href="#bookmarklet" style="color:black;">Bookmarklet</a> |
-  <a href="#dmca" style="color:black;">DMCA</a> |
-  <a href="#apply" style="color:black;">Apply to YC</a> |
   <a href="#contact" style="color:black;">Contact</a>
 
   </div>

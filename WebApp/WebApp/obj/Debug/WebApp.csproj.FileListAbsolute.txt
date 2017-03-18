@@ -13,3 +13,9 @@ C:\Users\houma\Desktop\electroBeavers\WebApp\WebApp\bin\WebApp.pdb
 C:\Users\houma\Desktop\electroBeavers\WebApp\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
 C:\Users\houma\Desktop\electroBeavers\WebApp\WebApp\obj\Debug\WebApp.dll
 C:\Users\houma\Desktop\electroBeavers\WebApp\WebApp\obj\Debug\WebApp.pdb
+C:\Users\houma\OneDrive\Documents\GitHub\electroBeavers\WebApp\WebApp\bin\WebApp.dll.config
+C:\Users\houma\OneDrive\Documents\GitHub\electroBeavers\WebApp\WebApp\bin\WebApp.dll
+C:\Users\houma\OneDrive\Documents\GitHub\electroBeavers\WebApp\WebApp\bin\WebApp.pdb
+C:\Users\houma\OneDrive\Documents\GitHub\electroBeavers\WebApp\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
+C:\Users\houma\OneDrive\Documents\GitHub\electroBeavers\WebApp\WebApp\obj\Debug\WebApp.dll
+C:\Users\houma\OneDrive\Documents\GitHub\electroBeavers\WebApp\WebApp\obj\Debug\WebApp.pdb

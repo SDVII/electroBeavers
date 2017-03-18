@@ -40,30 +40,23 @@ namespace WebApp
                 {
                     while (rd.Read())
                     {
-                          table.Append("<li><a href=\"\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a><a class=\"title\" href=\"\">"+
+                          table.Append("<li style=\"padding-top:1%; \"><a href=\"\"><i class=\"fa fa-heart\" style=\"padding-right:10px\" aria-hidden=\"true\"></i></a><a class=\"title\" href=\"\">" +
                          rd[1]  + "</a> <a class=\"site\" href=\"\">"
    + " <span *ngIf=\"item.domain\" class=\"domain\">("
      + rd[6] + ")</span></a>"
    +" <div class=\"subtext-laptop\">"
-   +" <span style=\"padding-left:1.1%\">"
+   +" <span>"
      + rd[3] + " points by"
     +"  <a href=\"\">UserName</a>"
    +" </span>"
    +" <span>"
     +  rd[2]  
     +"  <span> |"
-    +"    <a href=\"\">"
        +"   <span *ngIf=\"item.comments_count !== 0\">"
         +"    X"
-         +"   <span *ngIf=\"item.comments_count == 1\">comment<i class=\"fa fa-comments-o\"></i></span>"
          +"   <span *ngIf=\"item.comments_count > 1\">comments</span>"
          +" </span> |"
-         +" <span *ngIf=\"item.comments_count === 0\">discuss</span> |"
-
-      +"  <span *ngIf=\"item.hide\">hide</span> |"
-      +"  <span *ngIf=\"item.past\">past</span> |"
-     +"   <span *ngIf=\"item.web\">web</span>"
-          +"    </a>"
+         +" <a href=\"\"><span *ngIf=\"item.comments_count === 0\">discuss</span></a> "
     +"  </span>"
    +"  </span>"
    +"</div>"
