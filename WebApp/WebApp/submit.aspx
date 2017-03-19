@@ -38,11 +38,12 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
                         <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Submit</a></li>
-                        <li><asp:HyperLink ID="hyperHome" runat="server" Text="News" NavigateUrl="~/homepage.aspx" ></asp:HyperLink></li>
+                        <li><asp:HyperLink ID="hyperHome" runat="server" Text="News" NavigateUrl="~/homepage.aspx" ForeColor="White" ></asp:HyperLink></li>
                         <li><a href="#ask" style="color:white;">Questions</a></li>
                         <li><a href="#jobs" style="color:white;">Jobs</a></li>
-                        <li><a href="#login" style="color:white;">Login</a></li>
+                        <li><asp:HyperLink ID="hyperLogin" runat="server" Text="Login" NavigateUrl="~/login.aspx" ForeColor="White"></asp:HyperLink></li>
 					</ul>
+                     <asp:LinkButton ID="linkBLogout" OnClick="linkBLogout_Click" runat="server" class="fa fa-sign-out" style="color: white;font-size: 26px;margin-top: 13px;float: right;margin-right: 15px; position: relative;" ForeColor="White"></asp:LinkButton>
 				</div>
 
 			</div>

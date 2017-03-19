@@ -58,6 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Contents\css\login.css" />
     <Content Include="Database\BEAVER NEWS.mdb" />
     <Content Include="Contents\BNlogo.png" />
     <Content Include="Contents\css\bootstrap.css" />

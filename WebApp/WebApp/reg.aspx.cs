@@ -35,7 +35,7 @@ namespace WebApp
                 Label1.Text = "Records Added Successfully";
                 con.Close();
             }
-            catch (Exception err) {
+            catch (Exception) {
                 Label1.Text = "Error !!";
             }
 

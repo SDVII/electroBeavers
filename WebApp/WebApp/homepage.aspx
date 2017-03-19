@@ -40,9 +40,12 @@
                         <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Beaver News</a></li>
                         <li><a href="#ask" style="color:white;">Ask</a></li>
                         <li><a href="#jobs" style="color:white;">Questions</a></li>
-                        <li><asp:HyperLink ID="hyperSubmit" runat="server" Text="Submit" NavigateUrl="~/submit.aspx" ></asp:HyperLink></li>
-                        <li><a href="#login" style="color:white;">Login</a></li>
+                        <li><asp:HyperLink ID="hyperSubmit" runat="server" Text="Submit" NavigateUrl="~/submit.aspx" ForeColor="white" ></asp:HyperLink></li>
+                        <li><asp:HyperLink ID="hyperLogin" runat="server" Text="Login" NavigateUrl="~/login.aspx" ForeColor="white"></asp:HyperLink></li>
 					</ul>
+                    <form runat="server">
+                        <asp:LinkButton ID="linkBLogout" OnClick="linkBLogout_Click"  runat="server" class="fa fa-sign-out" style="color: white;font-size: 26px;margin-top: 13px;float: right;margin-right: 15px; position: relative;" ForeColor="#307A9E" Visible="True"></asp:LinkButton>
+                    </form>
 				</div>
 			</div>
 		</nav>
@@ -55,6 +58,7 @@
 					 <div class="item-laptop">
                         <ol type="1">
                             <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+                        </ol>
                     </div>
     	            <nav class="nav1">
 						<ul class="pager">

@@ -3,68 +3,71 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            height: 23px;
-        }
-        .auto-style3 {
-            width: 197px;
-        }
-        .auto-style4 {
-            height: 23px;
-            width: 197px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">Surname :</td>
-                <td>
-                    <asp:TextBox ID="usernameTXT" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style3">Password :</td>
-                <td>
-                    <asp:TextBox ID="passwordTXT" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td>
-                    <asp:Button ID="Validate" runat="server" OnClick="Button1_Click" Text="Validate" />
-&nbsp;&nbsp;
-                    <asp:Button ID="Button2" runat="server" Text="Reset" />
-&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style4">
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/reg.aspx">Register</asp:HyperLink>
-                </td>
-                <td class="auto-style2"></td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td>
-                    <asp:Label ID="Label123" runat="server" Text="Label" Visible="False"></asp:Label>
-                </td>
-            </tr>
-        </table>
-    </form>
-</body>
+    <head runat="server">
+        <link rel="icon" href="Contents/BNlogo.png"/>
+        <title>Submit</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+        <link rel="stylesheet" href="Contents/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="Contents/css/template.css"/>
+        <link rel="stylesheet" href="Contents/css/login.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        
+		<!-- Navigation -->
+	    <nav class="navbar navbar-fixed-top navbar-inverse nav2" role="navigation" style="background-color:#307a9e">
+			<div class="container-fluid1">
+
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="Contents\BNlogo.png" width="40" height="40" alt="Sitename" ></a>
+				</div>
+				<!-- /.navbar-header -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+                        <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Login</a></li>
+                        <li><asp:HyperLink ID="hyperHome" runat="server" Text="News" NavigateUrl="~/homepage.aspx" ForeColor="White" ></asp:HyperLink></li>
+                        <li><a href="#ask" style="color:white;">Questions</a></li>
+                        <li><a href="#jobs" style="color:white;">Jobs</a></li>
+                        <li><asp:HyperLink ID="hyperSubmit" runat="server" Text="Submit" NavigateUrl="~/submit.aspx" ForeColor="white" ></asp:HyperLink></li>
+					</ul>
+				</div>
+
+			</div>
+		</nav>
+		<!-- /.navbar -->
+
+        <!-- Page Content -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+                        <form id="frmLogin" runat="server" style="margin-top: 2%; margin-left: 1%">
+                        <div style="padding-left:39%";>
+                            <div style="margin-bottom:1%"><img src="Contents\BNlogo.png" width="241" height="241" alt="logo"/></div>
+                            <asp:Label runat="server" ID="lblName" Text="Username:" ></asp:Label>
+                            <asp:Label runat="server" ID="lblErr1" Text="Invalid Username" CssClass="red" Visible="false" ></asp:Label>                       
+                            <asp:TextBox ID="txtUser" runat="server" Width="236px" class="form-control spacing"></asp:TextBox>                            
+                            <asp:Label runat="server" ID="lblPass" Text="Password:" ></asp:Label>
+                            <asp:Label runat="server" ID="lblErr2" Text="Invalid Password" CssClass="red" Visible="false" ></asp:Label>
+                            <asp:TextBox ID="txtPass" runat="server" Width="236px" class="form-control spacing" TextMode="Password"></asp:TextBox>                            
+                            <asp:Button ID="btnSubmit" runat="server"  Text="Login" Width="236px" class="btn btn-primary spacing" OnClick="btnSubmit_Click"/>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </body>
 </html>
