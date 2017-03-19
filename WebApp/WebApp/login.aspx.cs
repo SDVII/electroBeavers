@@ -76,6 +76,7 @@ namespace WebApp
                                                     
                         }
                         Response.Redirect("~/homepage.aspx",false);
+                        
                     }
                 }
                 catch (OleDbException)
@@ -86,6 +87,11 @@ namespace WebApp
 
 
             }
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/register.aspx");
         }
     }
 }

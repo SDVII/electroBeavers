@@ -31,13 +31,13 @@ namespace WebApp {
         protected global::System.Web.UI.WebControls.HyperLink hyperLogin;
         
         /// <summary>
-        /// linkBLogout control.
+        /// hyperlinkLogout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkBLogout;
+        protected global::System.Web.UI.WebControls.HyperLink hyperlinkLogout;
         
         /// <summary>
         /// PlaceHolder1 control.

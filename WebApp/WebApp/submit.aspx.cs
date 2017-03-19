@@ -17,21 +17,15 @@ namespace WebApp
             {
                 int user_id = Convert.ToInt32(Session["user_id"]);
                 hyperLogin.Visible = false;
-                linkBLogout.Visible = true;
+                hyperlinkLogout.Visible = true;
             }
             else
             {
-                hyperLogin.Visible = true;
-                linkBLogout.Visible = false;
+                Response.Redirect("~/login.aspx");
             }
 
         }
 
-        protected void linkBLogout_Click(object sender, EventArgs e)
-        {
-            Session.Abandon();
-            Response.Redirect("~/login.aspx");
-        }
 
         protected void Button1_Click(object sender, EventArgs e)
         {

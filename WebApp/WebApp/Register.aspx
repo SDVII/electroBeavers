@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="WebApp.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="WebApp.WebForm1" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <link rel="icon" href="Contents/BNlogo.png"/>
-        <title>Login</title>
+        <title>Register</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -59,12 +59,20 @@
                             <div style="margin-bottom:1%"><img src="Contents\BNlogo.png" width="241" height="241" alt="logo"/></div>
                             <asp:Label runat="server" ID="lblName" Text="Username:" ></asp:Label>
                             <asp:Label runat="server" ID="lblErr1" Text="Invalid Username" CssClass="red" Visible="false" ></asp:Label>                       
-                            <asp:TextBox ID="txtUser" runat="server" Width="236px" class="form-control spacing"></asp:TextBox>                            
+                            <asp:TextBox ID="txtUser" runat="server" Width="236px" class="form-control spacing"></asp:TextBox>
+                            <asp:Label runat="server" ID="lblEmail" Text="Email:" ></asp:Label>  
+                            <asp:Label runat="server" ID="lblEmailErr" Text="Used Email" CssClass="red" Visible="false" ></asp:Label>                   
+                            <asp:TextBox ID="txtEmail" runat="server" Width="236px" class="form-control spacing" TextMode="Email"></asp:TextBox>                                   
                             <asp:Label runat="server" ID="lblPass" Text="Password:" ></asp:Label>
                             <asp:Label runat="server" ID="lblErr2" Text="Invalid Password" CssClass="red" Visible="false" ></asp:Label>
-                            <asp:TextBox ID="txtPass" runat="server" Width="236px" class="form-control spacing" TextMode="Password"></asp:TextBox>                            
-                            <asp:Button ID="btnSubmit" runat="server"  Text="Login" Width="236px" class="btn btn-primary spacing" OnClick="btnSubmit_Click"/>
-                            <asp:Button ID="btnRegister" runat="server"  Text="Register" Width="236px" class="btn btn-default spacing " style="display: block;" OnClick="btnRegister_Click" />
+                            <asp:TextBox ID="txtPass" runat="server" Width="236px" class="form-control spacing" TextMode="Password"></asp:TextBox>
+                            <asp:Label runat="server" ID="lblQ" Text="Security Question:" ></asp:Label>
+                            <asp:Label runat="server" ID="lblQErr" Text="Invalid Security Question" CssClass="red" Visible="false" ></asp:Label>
+                            <asp:TextBox ID="txtQ" runat="server" Width="236px" class="form-control spacing"></asp:TextBox>
+                            <asp:Label runat="server" ID="lblA" Text="Answer:" ></asp:Label>
+                            <asp:Label runat="server" ID="lblAErr" Text="Invalid Answer" CssClass="red" Visible="false" ></asp:Label>
+                            <asp:TextBox ID="txtA" runat="server" Width="236px" class="form-control spacing"></asp:TextBox>
+                            <asp:Button ID="btnSubmit" runat="server"  Text="Login" Width="236px" class="btn btn-success spacing" OnClick="btnSubmit_Click"/>
                         </div>
                         </form>
                     </div>
@@ -72,3 +80,4 @@
             </div>
     </body>
 </html>
+

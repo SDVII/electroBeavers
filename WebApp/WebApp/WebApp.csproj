@@ -70,12 +70,13 @@
     <Content Include="jobs.aspx" />
     <Content Include="login.aspx" />
     <Content Include="questions.aspx" />
-    <Content Include="reg.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="submit.aspx" />
     <Content Include="Web.config" />
+    <Content Include="register.aspx" />
+    <Content Include="logout.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="homepage.aspx.cs">
@@ -107,19 +108,26 @@
     <Compile Include="questions.aspx.designer.cs">
       <DependentUpon>questions.aspx</DependentUpon>
     </Compile>
-    <Compile Include="reg.aspx.cs">
-      <DependentUpon>reg.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="reg.aspx.designer.cs">
-      <DependentUpon>reg.aspx</DependentUpon>
-    </Compile>
     <Compile Include="submit.aspx.cs">
       <DependentUpon>submit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="submit.aspx.designer.cs">
       <DependentUpon>submit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

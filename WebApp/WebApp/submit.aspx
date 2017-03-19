@@ -43,7 +43,7 @@
                         <li><a href="#jobs" style="color:white;">Jobs</a></li>
                         <li><asp:HyperLink ID="hyperLogin" runat="server" Text="Login" NavigateUrl="~/login.aspx" ForeColor="White"></asp:HyperLink></li>
 					</ul>
-                     <asp:LinkButton ID="linkBLogout" OnClick="linkBLogout_Click" runat="server" class="fa fa-sign-out" style="color: white;font-size: 26px;margin-top: 13px;float: right;margin-right: 15px; position: relative;" ForeColor="White"></asp:LinkButton>
+                       <asp:HyperLink ID="hyperlinkLogout" runat="server" NavigateUrl="~/logout.aspx" class="fa fa-sign-out" style="color: white;font-size: 26px;margin-top: 13px;float: right;margin-right: 15px; position: relative;" ForeColor="#307A9E" Visible="True"></asp:HyperLink>
 				</div>
 
 			</div>
