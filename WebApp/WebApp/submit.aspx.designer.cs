@@ -22,6 +22,24 @@ namespace WebApp {
         protected global::System.Web.UI.WebControls.HyperLink hyperHome;
         
         /// <summary>
+        /// hyperLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hyperLogin;
+        
+        /// <summary>
+        /// hyperlinkLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hyperlinkLogout;
+        
+        /// <summary>
         /// title control.
         /// </summary>
         /// <remarks>

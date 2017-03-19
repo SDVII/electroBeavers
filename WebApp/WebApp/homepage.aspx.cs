@@ -19,7 +19,20 @@ namespace WebApp
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if(!Page.IsPostBack)
+
+            if (Session["user_id"] != null)
+            {
+                int user_id = Convert.ToInt32(Session["user_id"]);
+                hyperLogin.Visible = false;
+                hyperlinkLogout.Visible = true;
+            }
+            else
+            {
+                hyperLogin.Visible = true;
+                hyperlinkLogout.Visible = false;
+            }
+
+            if (!Page.IsPostBack)
             {
                 OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source="
                 + Server.MapPath("Database/BEAVER NEWS.mdb") + ";Persist Security Info=False");
@@ -72,9 +85,7 @@ namespace WebApp
 
         }
 
-    
-    
-    
+
     }
 }
 

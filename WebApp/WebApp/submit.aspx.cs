@@ -13,7 +13,19 @@ namespace WebApp
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Session["user_id"] != null)
+            {
+                int user_id = Convert.ToInt32(Session["user_id"]);
+                hyperLogin.Visible = false;
+                hyperlinkLogout.Visible = true;
+            }
+            else
+            {
+                Response.Redirect("~/login.aspx");
+            }
+
         }
+
 
         protected void Button1_Click(object sender, EventArgs e)
         {
