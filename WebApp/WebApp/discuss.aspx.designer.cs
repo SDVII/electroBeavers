@@ -10,7 +10,16 @@
 namespace WebApp {
     
     
-    public partial class login {
+    public partial class discuss {
+        
+        /// <summary>
+        /// Head1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
         
         /// <summary>
         /// hyperHome control.
@@ -31,93 +40,93 @@ namespace WebApp {
         protected global::System.Web.UI.WebControls.HyperLink hyperSubmit;
         
         /// <summary>
-        /// frmLogin control.
+        /// hyperLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frmLogin;
+        protected global::System.Web.UI.WebControls.HyperLink hyperLogin;
         
         /// <summary>
-        /// lblName control.
+        /// hyperlinkLogout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblName;
+        protected global::System.Web.UI.WebControls.HyperLink hyperlinkLogout;
         
         /// <summary>
-        /// lblErr1 control.
+        /// articleLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErr1;
+        protected global::System.Web.UI.WebControls.HyperLink articleLink;
         
         /// <summary>
-        /// txtUser control.
+        /// articleDiscription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUser;
+        protected global::System.Web.UI.WebControls.Label articleDiscription;
         
         /// <summary>
-        /// lblPass control.
+        /// articleAuthor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPass;
+        protected global::System.Web.UI.WebControls.Label articleAuthor;
         
         /// <summary>
-        /// lblErr2 control.
+        /// articleDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErr2;
+        protected global::System.Web.UI.WebControls.Label articleDate;
         
         /// <summary>
-        /// txtPass control.
+        /// userID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPass;
+        protected global::System.Web.UI.WebControls.Label userID;
         
         /// <summary>
-        /// btnSubmit control.
+        /// commText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
+        protected global::System.Web.UI.WebControls.TextBox commText;
         
         /// <summary>
-        /// btnRegister control.
+        /// btnComment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegister;
+        protected global::System.Web.UI.WebControls.Button btnComment;
         
         /// <summary>
-        /// hlForget control.
+        /// PlaceHolder1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlForget;
+        protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder1;
     }
 }

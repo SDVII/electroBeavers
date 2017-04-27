@@ -16,9 +16,9 @@ namespace WebApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user_id"] != null)
+            if (Session["user_id"] != null || Session["admin_id"] != null)
             {
-                Response.Redirect("~/homepage.aspx");
+                Response.Redirect("~/homepage.aspx?page=1");
             }
         }
 
@@ -42,7 +42,7 @@ namespace WebApp
                 OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + 
                 Server.MapPath("Database/BEAVER NEWS.mdb") + ";Persist Security Info=False");
 
-                string query = "SELECT [user_ID] FROM [USER] WHERE [NICKNAME] = '" + txtUser.Text + "' AND [PASSWORD] = '" + txtPass.Text +"'";
+                string query = "SELECT * FROM [USER] WHERE [user_Nick] = '" + txtUser.Text + "' AND [user_Pass] = '" + txtPass.Text +"'";
                 System.Diagnostics.Debug.Write(query);
                 OleDbCommand cmd = new OleDbCommand(query, con);
                 
@@ -58,7 +58,14 @@ namespace WebApp
                     while(rd.Read())
                     {
                         count++;
-                        Session["user_id"] = rd[0];
+                        if (Convert.ToBoolean(rd[4]) == true)
+                        {
+                            Session["admin_id"] = rd[0];
+                        }
+                            if (Convert.ToBoolean(rd[4]) == false)
+                        {
+                            Session["user_id"] = rd[0];
+                        }
                     }
                     
 
@@ -71,13 +78,17 @@ namespace WebApp
                     }
                     else
                     {
-                        while (rd.Read())
-                        {   
-                                                    
+                        if (Session["user_id"] != null)
+                        {
+                            Response.Redirect("~/homepage.aspx?page=1", false);
                         }
-                        Response.Redirect("~/homepage.aspx",false);
+                        else
+                        {
+                            Response.Redirect("~/admin.aspx", false);
+                        }
                         
                     }
+                    con.Close();
                 }
                 catch (OleDbException)
                 {

@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="WebApp.homepage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="discuss.aspx.cs" Inherits="WebApp.discuss" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-    <head runat="server">
+    <head id="Head1" runat="server">
         <link rel="icon" href="Contents/BNlogo.png"/>    
         <title>Bearvers News</title>
         <meta charset="utf-8"/>
@@ -37,7 +37,8 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-                        <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Beaver News</a></li>
+                        <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Discuss</a></li>
+                        <li><asp:HyperLink ID="hyperHome" runat="server" Text="News" NavigateUrl="~/homepage.aspx?page=1" ForeColor="White" ></asp:HyperLink></li>
                         <li><a href="#ask" style="color:white;">Ask</a></li>
                         <li><a href="#jobs" style="color:white;">Questions</a></li>
                         <li><asp:HyperLink ID="hyperSubmit" runat="server" Text="Submit" NavigateUrl="~/submit.aspx" ForeColor="white" ></asp:HyperLink></li>
@@ -50,20 +51,36 @@
 		<!-- /.navbar -->
 
 		<!-- Page Content -->
-		<div class="container-fluid">
+		<div class="container-fluid" style="height:100%">
 			<div class="row">
 				<div class="col-sm-12">
 					 <div class="item-laptop">
+                         <!-- Article -->
+                         <div style="padding-top:2%; padding-left:1% ">
+                            <div><asp:HyperLink runat ="server" ID ="articleLink" Font-Size="18px"></asp:HyperLink></div>
+                            <div><asp:Label runat="server" ID="articleDiscription"></asp:Label></div>
+                            <div class="subtext-laptop">
+                                 <span>Writen by  <span style="font-weight:bold"><asp:Label runat="server" ID="articleAuthor"></asp:Label></span>
+                                 </span> <span> at <asp:Label runat="server" ID="articleDate"></asp:Label>  </span>
+                            </div></div>
+                         <hr style="border-color:darkgray"/>
+                         <!-- /Article -->
+                         <!-- Write a comment -->
+                         <div style="padding-left:1% ">
+                            <form runat="server">
+                                <div><span style="color:GrayText">*The comment will be submitted under this name: <asp:Label runat="server" ID="userID"></asp:Label></span></div>
+                                <div class="input-group" style="width:100%; margin-top:1%">
+                                    <asp:TextBox runat="server" ID="commText" TextMode="MultiLine" class="form-control custom-control" rows="3" style="width:99%;height:3%;resize:none"></asp:TextBox>     
+                                </div>
+                                 <asp:Button ID="btnComment" runat="server"  Text="Comment" style="margin-top:1%" class="btn btn-primary spacing" OnClick="btnComment_Click"/>
+                            </form>
+                         </div>
+                         <hr style="border-color:darkgray"/>
+                         <!-- /Write a comment -->
                         <ol type="1">
                             <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
                         </ol>
                     </div>
-    	            <nav class="nav1">
-						<ul class="pager">
-							<li class="previous"><asp:HyperLink runat="server" ID="prev"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Prev</asp:HyperLink></li>
-							<li class="next"><asp:HyperLink runat="server" ID="next">Next <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></asp:HyperLink></li>
-						</ul>
-					</nav>
 					<hr/>
                     <footer>
                         <div class="">

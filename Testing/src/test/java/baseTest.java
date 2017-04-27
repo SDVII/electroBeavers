@@ -35,4 +35,13 @@ public class baseTest
         driver.findElement(By.id("btnSubmit")).click();
     }
 
+    public boolean isElementPresent(By by) {
+        try {
+            driver.findElement(by);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }

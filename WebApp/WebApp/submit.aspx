@@ -38,7 +38,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
                         <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Submit</a></li>
-                        <li><asp:HyperLink ID="hyperHome" runat="server" Text="News" NavigateUrl="~/homepage.aspx" ForeColor="White" ></asp:HyperLink></li>
+                        <li><asp:HyperLink ID="hyperHome" runat="server" Text="News" NavigateUrl="~/homepage.aspx?page=1" ForeColor="White" ></asp:HyperLink></li>
                         <li><a href="#ask" style="color:white;">Questions</a></li>
                         <li><a href="#jobs" style="color:white;">Jobs</a></li>
                         <li><asp:HyperLink ID="hyperLogin" runat="server" Text="Login" NavigateUrl="~/login.aspx" ForeColor="White"></asp:HyperLink></li>

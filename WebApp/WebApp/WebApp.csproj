@@ -58,6 +58,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin.aspx" />
+    <Content Include="approve.aspx" />
+    <Content Include="change_pass.aspx" />
     <Content Include="Contents\css\login.css" />
     <Content Include="Database\BEAVER NEWS.mdb" />
     <Content Include="Contents\BNlogo.png" />
@@ -66,8 +69,11 @@
     <Content Include="Contents\css\homepage.css" />
     <Content Include="Contents\css\submit.css" />
     <Content Include="Contents\css\template.css" />
+    <Content Include="discuss.aspx" />
+    <Content Include="hide.aspx" />
     <Content Include="homepage.aspx" />
     <Content Include="jobs.aspx" />
+    <Content Include="like.aspx" />
     <Content Include="login.aspx" />
     <Content Include="questions.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -79,6 +85,41 @@
     <Content Include="logout.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="approve.aspx.cs">
+      <DependentUpon>approve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="approve.aspx.designer.cs">
+      <DependentUpon>approve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="change_pass.aspx.cs">
+      <DependentUpon>change_pass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="change_pass.aspx.designer.cs">
+      <DependentUpon>change_pass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="discuss.aspx.cs">
+      <DependentUpon>discuss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="discuss.aspx.designer.cs">
+      <DependentUpon>discuss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hide.aspx.cs">
+      <DependentUpon>hide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hide.aspx.designer.cs">
+      <DependentUpon>hide.aspx</DependentUpon>
+    </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -92,6 +133,13 @@
     </Compile>
     <Compile Include="jobs.aspx.designer.cs">
       <DependentUpon>jobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="like.aspx.cs">
+      <DependentUpon>like.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="like.aspx.designer.cs">
+      <DependentUpon>like.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

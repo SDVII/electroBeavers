@@ -39,7 +39,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
                         <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Login</a></li>
-                        <li><asp:HyperLink ID="hyperHome" runat="server" Text="News" NavigateUrl="~/homepage.aspx" ForeColor="White" ></asp:HyperLink></li>
+                        <li><asp:HyperLink ID="hyperHome" runat="server" Text="News" NavigateUrl="~/homepage.aspx?page=1" ForeColor="White" ></asp:HyperLink></li>
                         <li><a href="#ask" style="color:white;">Questions</a></li>
                         <li><a href="#jobs" style="color:white;">Jobs</a></li>
                         <li><asp:HyperLink ID="hyperSubmit" runat="server" Text="Submit" NavigateUrl="~/submit.aspx" ForeColor="white" ></asp:HyperLink></li>
@@ -64,7 +64,8 @@
                             <asp:Label runat="server" ID="lblErr2" Text="Invalid Password" CssClass="red" Visible="false" ></asp:Label>
                             <asp:TextBox ID="txtPass" runat="server" Width="236px" class="form-control spacing" TextMode="Password"></asp:TextBox>                            
                             <asp:Button ID="btnSubmit" runat="server"  Text="Login" Width="236px" class="btn btn-primary spacing" OnClick="btnSubmit_Click"/>
-                            <asp:Button ID="btnRegister" runat="server"  Text="Register" Width="236px" class="btn btn-default spacing " style="display: block;" OnClick="btnRegister_Click" />
+                            <asp:Button ID="btnRegister" runat="server"  Text="Register" Width="236px" class="btn btn-default spacing " style="display: block; margin-bottom:10px" OnClick="btnRegister_Click" />
+                            <asp:HyperLink runat="server" ID="hlForget" Text =" Forgot your password? " style="margin-left:5%" NavigateUrl="~/change_pass.aspx"></asp:HyperLink>
                         </div>
                         </form>
                     </div>

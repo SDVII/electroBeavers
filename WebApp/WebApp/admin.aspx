@@ -1,11 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="WebApp.homepage" %>
-
-<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin.aspx.cs" Inherits="WebApp.approval" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-    <head runat="server">
+    <head id="Head1" runat="server">
         <link rel="icon" href="Contents/BNlogo.png"/>    
-        <title>Bearvers News</title>
+        <title>Admin Panel</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="Contents/css/bootstrap.min.css"/>
@@ -20,7 +18,7 @@
 
 		<!-- Navigation -->
 	    <nav class="navbar navbar-fixed-top navbar-inverse nav2" role="navigation" style="background-color:#307a9e">
-			<div class="container-fluid1">
+			<div class="container-fluid1" style="height:0%">
 
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -37,11 +35,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-                        <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Beaver News</a></li>
-                        <li><a href="#ask" style="color:white;">Ask</a></li>
-                        <li><a href="#jobs" style="color:white;">Questions</a></li>
-                        <li><asp:HyperLink ID="hyperSubmit" runat="server" Text="Submit" NavigateUrl="~/submit.aspx" ForeColor="white" ></asp:HyperLink></li>
-                        <li><asp:HyperLink ID="hyperLogin" runat="server" Text="Login" NavigateUrl="~/login.aspx" ForeColor="white"></asp:HyperLink></li>
+                        <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Admin Panel</a></li>
 					</ul>
                         <asp:HyperLink ID="hyperlinkLogout" runat="server" NavigateUrl="~/logout.aspx" class="fa fa-sign-out" style="color: white;font-size: 26px;margin-top: 13px;float: right;margin-right: 15px; position: relative;" ForeColor="#307A9E" Visible="True"></asp:HyperLink>
 				</div>
@@ -58,12 +52,6 @@
                             <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
                         </ol>
                     </div>
-    	            <nav class="nav1">
-						<ul class="pager">
-							<li class="previous"><asp:HyperLink runat="server" ID="prev"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Prev</asp:HyperLink></li>
-							<li class="next"><asp:HyperLink runat="server" ID="next">Next <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></asp:HyperLink></li>
-						</ul>
-					</nav>
 					<hr/>
                     <footer>
                         <div class="">

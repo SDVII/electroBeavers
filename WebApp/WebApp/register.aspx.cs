@@ -15,14 +15,14 @@ namespace WebApp
 
         Regex regUser = new Regex(@"^\S{5,20}$");
         Regex regPass = new Regex(@".{5,20}");
-        Regex regQ = new Regex("^[a-zA-Z0-9 ].{5,}$");
+        Regex regQ = new Regex("^[a-zA-Z0-9 ].{3,}$");
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["user_id"] != null)
             {
-                Response.Redirect("~/homepage.aspx");
+                Response.Redirect("~/homepage.aspx?page=1");
             }
         }
 
@@ -56,10 +56,10 @@ namespace WebApp
                 OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +
                 Server.MapPath("Database/BEAVER NEWS.mdb") + ";Persist Security Info=False");
 
-                string queryInsert = "INSERT INTO [USER] ([NICKNAME], [EMAIL], [PASSWORD]) VALUES ('" + txtUser.Text + "','" + txtEmail.Text + "','" + txtPass.Text + "')";
+                string queryInsert = "INSERT INTO [USER] ([user_Nick], [user_Email], [user_Pass], [user_SQ], [user_SA]) VALUES ('" + txtUser.Text + "','" + txtEmail.Text + "','" + txtPass.Text + "','" + txtQ.Text + "','" + txtA.Text + "')";
                 OleDbCommand cmd2 = new OleDbCommand(queryInsert, con);
 
-                string querySelect = "SELECT COUNT(*) FROM [USER] WHERE [NICKNAME] = '"+txtUser.Text+"' OR [EMAIL] = '"+txtEmail.Text+"' ";
+                string querySelect = "SELECT COUNT(*) FROM [USER] WHERE [user_Nick] = '"+txtUser.Text+"' OR [user_Email] = '"+txtEmail.Text+"' ";
                 OleDbCommand cmd1 = new OleDbCommand(querySelect, con);
 
                 //Validation for the execution
@@ -80,6 +80,8 @@ namespace WebApp
                         cmd2.ExecuteNonQuery();
                         Response.Redirect("~/login.aspx", false);
                     }
+
+                    con.Close();
 
                 }
                 catch (OleDbException)

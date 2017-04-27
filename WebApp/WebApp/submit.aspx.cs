@@ -29,13 +29,15 @@ namespace WebApp
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            int user_id = Convert.ToInt32(Session["user_id"]);
             DateTime localDate = DateTime.Now;
+            int type = 0;
 
             //Submitting data to DB
             OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +
             Server.MapPath("Database/BEAVER NEWS.mdb") + ";Persist Security Info=False");
-            string query = "INSERT INTO ARTICLE ([TITLE], [DATE], [LIKES], [user_ID], [description], [url]) VALUES ('" + title.Text + "','" + localDate + "' ,'0','1','" + txt.Text + "','" + URL.Text + "')";
+            string query = "INSERT INTO ARTICLE ([article_Title], [article_Date], [user_ID], [article_Descrip], [article_Url], [article_Type]) VALUES ('" + title.Text + "','" + localDate + "',"+user_id+",'" + txt.Text + "','" + URL.Text + "','" + type + "')";
+            System.Diagnostics.Debug.Write(query);
             OleDbCommand cmd = new OleDbCommand(query, con);
 
             //Validation for the execution

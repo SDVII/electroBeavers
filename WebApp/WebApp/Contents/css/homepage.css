@@ -9,3 +9,12 @@
     height: 30px;
     width: 88%;
 }
+
+butt {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
