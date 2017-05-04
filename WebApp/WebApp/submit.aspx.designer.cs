@@ -40,6 +40,15 @@ namespace WebApp {
         protected global::System.Web.UI.WebControls.HyperLink hyperlinkLogout;
         
         /// <summary>
+        /// rblType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rblType;
+        
+        /// <summary>
         /// title control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace WebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox title;
+        
+        /// <summary>
+        /// rfvTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTitle;
         
         /// <summary>
         /// URL control.
@@ -58,6 +76,15 @@ namespace WebApp {
         protected global::System.Web.UI.WebControls.TextBox URL;
         
         /// <summary>
+        /// rfvUrl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUrl;
+        
+        /// <summary>
         /// txt control.
         /// </summary>
         /// <remarks>
@@ -65,6 +92,15 @@ namespace WebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt;
+        
+        /// <summary>
+        /// rfvText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvText;
         
         /// <summary>
         /// Button1 control.

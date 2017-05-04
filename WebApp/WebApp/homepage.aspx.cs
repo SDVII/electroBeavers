@@ -24,7 +24,7 @@ namespace WebApp
                 + Server.MapPath("Database/BEAVER NEWS.mdb") + ";Persist Security Info=False");
             con.Open();
 
-            string limitQuery = "Select COUNT(*) FROM ARTICLE";
+            string limitQuery = "Select COUNT(*) FROM ARTICLE WHERE [article_Type] = 0 ";
             OleDbCommand cmdLimit = new OleDbCommand(limitQuery, con);
             int articlelimit = Convert.ToInt32(cmdLimit.ExecuteScalar());
             int max = articlelimit;
@@ -91,7 +91,7 @@ namespace WebApp
                 int user_id = Convert.ToInt32(Session["user_id"]);
 
                 //Getting news from DB
-                string query = "SELECT TOP 15 * FROM ( Select TOP "+max+" * FROM [ARTICLE] ORDER BY [article_Date] ASC) WHERE [article_App] = true ORDER BY [article_Date] DESC ";
+                string query = "SELECT TOP 15 * FROM ( Select TOP " + max + " * FROM [ARTICLE] WHERE [article_Type] = 0 ORDER BY [article_Date] ASC) WHERE [article_App] = true AND [article_Type] = 0 ORDER BY [article_Date] DESC ";
                 OleDbCommand cmd1 = new OleDbCommand(query, con);
                 
                 OleDbDataReader rd = cmd1.ExecuteReader();

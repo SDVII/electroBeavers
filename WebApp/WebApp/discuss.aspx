@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
     <head id="Head1" runat="server">
         <link rel="icon" href="Contents/BNlogo.png"/>    
-        <title>Bearvers News</title>
+        <title>Beavers News</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="Contents/css/bootstrap.min.css"/>
@@ -39,8 +39,8 @@
 					<ul class="nav navbar-nav">
                         <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Discuss</a></li>
                         <li><asp:HyperLink ID="hyperHome" runat="server" Text="News" NavigateUrl="~/homepage.aspx?page=1" ForeColor="White" ></asp:HyperLink></li>
-                        <li><a href="#ask" style="color:white;">Ask</a></li>
-                        <li><a href="#jobs" style="color:white;">Questions</a></li>
+                        <li><asp:HyperLink ID="HyperJob" runat="server" Text="Jobs" NavigateUrl="~/jobs.aspx" ForeColor="white" ></asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperQusetions" runat="server" Text="Questions" NavigateUrl="~/questions.aspx" ForeColor="white" ></asp:HyperLink></li>
                         <li><asp:HyperLink ID="hyperSubmit" runat="server" Text="Submit" NavigateUrl="~/submit.aspx" ForeColor="white" ></asp:HyperLink></li>
                         <li><asp:HyperLink ID="hyperLogin" runat="server" Text="Login" NavigateUrl="~/login.aspx" ForeColor="white"></asp:HyperLink></li>
 					</ul>

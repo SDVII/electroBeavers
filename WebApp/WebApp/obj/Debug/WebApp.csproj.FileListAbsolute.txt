@@ -24,3 +24,4 @@ G:\Source Code\electroBeavers\WebApp\WebApp\bin\WebApp.pdb
 G:\Source Code\electroBeavers\WebApp\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
 G:\Source Code\electroBeavers\WebApp\WebApp\obj\Debug\WebApp.dll
 G:\Source Code\electroBeavers\WebApp\WebApp\obj\Debug\WebApp.pdb
+G:\Source Code\electroBeavers\WebApp\WebApp\bin\WebApp.dll.config

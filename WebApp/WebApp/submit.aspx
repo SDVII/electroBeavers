@@ -15,11 +15,22 @@
             <link rel="stylesheet" href="Contents/css/template.css"/>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <style type="text/css">
+                .auto-style1 {
+                    width: 349px;
+                }
+                .auto-style2 {
+                    width: 632px;
+                }
+                .auto-style3 {
+                    width: 9%;
+                }
+            </style>
         </head>
         <body>
 
 		<!-- Navigation -->
-	    <nav class="navbar navbar-fixed-top navbar-inverse nav2" role="navigation" style="background-color:#307a9e">
+	    <nav class="navbar navbar-fixed-top navbar-inverse nav2" role="navigation" style="background-color:#307a9e; height: 62px;">
 			<div class="container-fluid1">
 
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -39,8 +50,8 @@
 					<ul class="nav navbar-nav">
                         <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Submit</a></li>
                         <li><asp:HyperLink ID="hyperHome" runat="server" Text="News" NavigateUrl="~/homepage.aspx?page=1" ForeColor="White" ></asp:HyperLink></li>
-                        <li><a href="#ask" style="color:white;">Questions</a></li>
-                        <li><a href="#jobs" style="color:white;">Jobs</a></li>
+                        <li><asp:HyperLink ID="HyperQusetions" runat="server" Text="Questions" NavigateUrl="~/questions.aspx" ForeColor="white" ></asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperJob" runat="server" Text="Jobs" NavigateUrl="~/jobs.aspx" ForeColor="white" ></asp:HyperLink></li>
                         <li><asp:HyperLink ID="hyperLogin" runat="server" Text="Login" NavigateUrl="~/login.aspx" ForeColor="White"></asp:HyperLink></li>
 					</ul>
                        <asp:HyperLink ID="hyperlinkLogout" runat="server" NavigateUrl="~/logout.aspx" class="fa fa-sign-out" style="color: white;font-size: 26px;margin-top: 13px;float: right;margin-right: 15px; position: relative;" ForeColor="#307A9E" Visible="True"></asp:HyperLink>
@@ -59,40 +70,61 @@
                   <form runat="server" style="margin-top: 2%; margin-left: 1%;">
                     <table id="tbl-form">
                         <tr>
-                            <td class="td-left">Title:</td>
-                            <td class="td-right">
+                            <td class="auto-style3">&nbsp;</td>
+                            <td class="auto-style1">
+      	                        <asp:RadioButtonList ID="rblType" runat="server" AppendDataBoundItems="True" CellPadding="30" CellSpacing="30" Height="20px" RepeatDirection="Horizontal" RepeatLayout="Flow" Width="258px" AutoPostBack="True">
+                                    <asp:ListItem Selected="True" Value="0">Article</asp:ListItem>
+                                    <asp:ListItem Value="1" style="margin-left:10px">Question</asp:ListItem>
+                                    <asp:ListItem Value="2" style="margin-left:10px">Job</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </td>
+                            <td class="auto-style2">
+      	                        &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style3">Title:</td>
+                            <td class="auto-style1">
       	                    <asp:TextBox ID="title" runat="server" Width="236px" class="form-control"></asp:TextBox>
                             </td>
+                            <td class="auto-style2">
+      	                        <asp:RequiredFieldValidator ID="rfvTitle" runat="server" ControlToValidate="title" ErrorMessage="Title Required" ForeColor="#990000"></asp:RequiredFieldValidator>
+                            </td>
                         </tr>
                         <tr>
-                            <td class="td-left">URL:</td>
-                            <td class="td-right">
+                            <td class="auto-style3">URL:</td>
+                            <td class="auto-style1">
                             <asp:TextBox ID="URL" runat="server" Width="236px" TextMode="Url" class="form-control"></asp:TextBox>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td style="font-weight: bold;">or</td>
-                        </tr>
-                        <tr>
-                            <td class="td-left">Text:</td>
-                            <td class="td-right">
-                            <asp:TextBox ID="txt" runat="server" Height="91px" TextMode="MultiLine" Width="240px" class="form-control"></asp:TextBox>
+                            <td class="auto-style2">
+                                <asp:RequiredFieldValidator ID="rfvUrl" runat="server" ControlToValidate="URL" ErrorMessage="URL Required" ForeColor="#990000"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td-left">&nbsp;</td>
-                            <td class="td-right">
+                            <td class="auto-style3">&nbsp;</td>
+                            <td style="font-weight: bold;" class="auto-style1">or</td>
+                            <td style="font-weight: bold;" class="auto-style2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style3">Text:</td>
+                            <td class="auto-style1">
+                            <asp:TextBox ID="txt" runat="server" Height="91px" TextMode="MultiLine" Width="240px" class="form-control"></asp:TextBox>
+                            </td>
+                            <td class="auto-style2">
+                                <asp:RequiredFieldValidator ID="rfvText" runat="server" ControlToValidate="txt" ErrorMessage="Discription Required" ForeColor="#990000"></asp:RequiredFieldValidator>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style3">&nbsp;</td>
+                            <td class="auto-style1">
                             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" class="btn btn-primary"/>
+                            &nbsp;
+                            </td>
+                            <td class="auto-style2">
                             <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
                             </td>
                         </tr>
                     </table>
       		    </form>
-
-                <div>
-      			    <p class="prg">Leave url blank to submit a question for discussion. If there is no url, the next (if any) will appear at the top of the thread.</p>
-      		    </div>
 
             </div>
 

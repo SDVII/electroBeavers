@@ -13,6 +13,24 @@ namespace WebApp {
     public partial class homepage {
         
         /// <summary>
+        /// HyperJob control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperJob;
+        
+        /// <summary>
+        /// HyperQusetions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperQusetions;
+        
+        /// <summary>
         /// hyperSubmit control.
         /// </summary>
         /// <remarks>

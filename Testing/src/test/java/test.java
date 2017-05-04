@@ -21,24 +21,22 @@ public class test extends baseTest
         login();
         driver.findElement(By.id("hyperSubmit")).click();
         driver.findElement(By.id("Button1")).click();
-        try {
-            assertEquals("Error !!", driver.findElement(By.id("Label1")).getText());
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
-        }
-
-        driver.findElement(By.id("title")).clear();
-        driver.findElement(By.id("title")).sendKeys("test");
-        driver.findElement(By.id("URL")).clear();
-        driver.findElement(By.id("URL")).sendKeys("http://test.test");
+        assertEquals("Title Required", driver.findElement(By.id("rfvTitle")).getText());
+        assertEquals("URL Required", driver.findElement(By.id("rfvUrl")).getText());
+        assertEquals("Discription Required", driver.findElement(By.id("rfvText")).getText());
+        driver.findElement(By.id("rblType_1")).click();
+        driver.findElement(By.cssSelector("#rblType > span > label")).click();
+        driver.findElement(By.id("rblType_2")).click();
+        driver.findElement(By.id("rblType_0")).click();
+        driver.findElement(By.cssSelector("label")).click();
         driver.findElement(By.id("txt")).clear();
         driver.findElement(By.id("txt")).sendKeys("test");
+        driver.findElement(By.id("URL")).clear();
+        driver.findElement(By.id("URL")).sendKeys("http://test.test");
+        driver.findElement(By.id("title")).clear();
+        driver.findElement(By.id("title")).sendKeys("test");
         driver.findElement(By.id("Button1")).click();
-        try {
-            assertEquals("Your Article was Added Successfully", driver.findElement(By.id("Label1")).getText());
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
-        }
+        assertEquals("Your Article was Added Successfully", driver.findElement(By.id("Label1")).getText());
         driver.findElement(By.id("hyperlinkLogout")).click();
         driver.findElement(By.id("txtUser")).clear();
         driver.findElement(By.id("txtUser")).sendKeys("admin7");
@@ -51,13 +49,13 @@ public class test extends baseTest
             verificationErrors.append(e.toString());
         }
         try {
-            assertTrue(isElementPresent(By.cssSelector("i.fa.fa-thumbs-o-up")));
+            assertTrue(isElementPresent(By.xpath("//ol/li[1]/a/i")));
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
-        driver.findElement(By.cssSelector("i.fa.fa-thumbs-o-up")).click();
+        driver.findElement(By.xpath("//ol/li[1]/a/i")).click();
         Thread.sleep(2000);
-        assertFalse(isElementPresent(By.cssSelector("i.fa.fa-thumbs-o-up")));
+        assertNotEquals(driver.findElement(By.xpath("//ol/li[1]/a[@class='title']")).getText(),"test");
         driver.findElement(By.id("hyperlinkLogout")).click();
         driver.findElement(By.id("txtUser")).clear();
         driver.findElement(By.id("txtUser")).sendKeys("houmam");
@@ -76,7 +74,7 @@ public class test extends baseTest
     public void newsTest() throws InterruptedException
     {
         try {
-            assertTrue(driver.findElements(By.xpath("//ol/li")).size()!=0);
+            assertTrue(driver.findElements(By.xpath("//ul/li")).size()!=0);
         }   catch (Error e) {
             verificationErrors.append(e.toString());
         }
@@ -165,7 +163,7 @@ public class test extends baseTest
         driver.findElement(By.id("txtPass")).clear();
         driver.findElement(By.id("txtPass")).sendKeys("testtest");
         driver.findElement(By.id("btnSubmit")).click();
-        assertEquals("Bearvers News", driver.getTitle());
+        assertEquals("Beavers News", driver.getTitle());
         driver.findElement(By.id("hyperSubmit")).click();
         assertEquals("Submit", driver.getTitle());
         driver.findElement(By.id("hyperlinkLogout")).click();
@@ -204,7 +202,7 @@ public class test extends baseTest
             verificationErrors.append(e.toString());
         }
         driver.findElement(By.cssSelector("i.fa.fa-heart")).click();
-        List heart = driver.findElements(By.xpath("//ol/li[1]/a[1]/i" ));
+        List heart = driver.findElements(By.xpath("//ul/li[1]/a[1]/i" ));
         assert(heart.size()==0);
     }
 
@@ -341,7 +339,7 @@ public class test extends baseTest
         driver.findElement(By.id("txtUser")).clear();
         driver.findElement(By.id("txtUser")).sendKeys("kinan");
         driver.findElement(By.id("btnSubmit")).click();
-        assertEquals("Bearvers News", driver.getTitle());
+        assertEquals("Beavers News", driver.getTitle());
         assertEquals("", driver.findElement(By.id("hyperlinkLogout")).getText());
     }
 

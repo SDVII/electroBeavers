@@ -12,6 +12,9 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            EnableViewState = true;
+            rblType.AutoPostBack = true;
+            rblType.SelectedIndexChanged += new EventHandler(rblType_SelectedIndexChanged);
 
             if (Session["user_id"] != null)
             {
@@ -31,7 +34,7 @@ namespace WebApp
         {
             int user_id = Convert.ToInt32(Session["user_id"]);
             DateTime localDate = DateTime.Now;
-            int type = 0;
+            int type = Convert.ToInt32(rblType.SelectedValue);
 
             //Submitting data to DB
             OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +
@@ -57,6 +60,37 @@ namespace WebApp
 
 
 
+        }
+
+        protected void rblType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ( Convert.ToInt32(rblType.SelectedValue)  == 0)
+            {
+                title.Enabled = true;
+                rfvTitle.Enabled = true;
+                URL.Enabled = true;
+                rfvUrl.Enabled = true;
+                txt.Enabled = true;
+                rfvText.Enabled = false;
+            }
+            else if (Convert.ToInt32(rblType.SelectedValue) == 1)
+            {
+                title.Enabled = true;
+                rfvTitle.Enabled = true;
+                URL.Enabled = false;
+                rfvUrl.Enabled = false;
+                txt.Enabled = true;
+                rfvText.Enabled = true;
+            }
+            else
+            {
+                title.Enabled = true;
+                rfvTitle.Enabled = true;
+                URL.Enabled = true;
+                rfvUrl.Enabled = false;
+                txt.Enabled = true;
+                rfvText.Enabled = true;
+            }
         }
     }
 }

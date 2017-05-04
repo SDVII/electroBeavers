@@ -40,8 +40,8 @@
 					<ul class="nav navbar-nav">
                         <li><a href="#" style="color:white; font-size: 18px; font-weight: bold;">Login</a></li>
                         <li><asp:HyperLink ID="hyperHome" runat="server" Text="News" NavigateUrl="~/homepage.aspx?page=1" ForeColor="White" ></asp:HyperLink></li>
-                        <li><a href="#ask" style="color:white;">Questions</a></li>
-                        <li><a href="#jobs" style="color:white;">Jobs</a></li>
+                        <li><asp:HyperLink ID="HyperQusetions" runat="server" Text="Questions" NavigateUrl="~/questions.aspx" ForeColor="white" ></asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperJob" runat="server" Text="Jobs" NavigateUrl="~/jobs.aspx" ForeColor="white" ></asp:HyperLink></li>
                         <li><asp:HyperLink ID="hyperSubmit" runat="server" Text="Submit" NavigateUrl="~/submit.aspx" ForeColor="white" ></asp:HyperLink></li>
 					</ul>
 				</div>
